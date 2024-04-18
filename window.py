@@ -11,13 +11,30 @@ label = tk.Label(
     )
 label.pack()
 
-label2 = tk.Label(
+entry = tk.Entry(
+    fg="yellow",
+    bg="blue",
+    width=50
+)
+entry.pack()
+
+
+button = tk.Button(
     text="Try two",
     bg="#34A2FE",
     fg="white",
-    width=10,
-    height=10,
+    width=25,
+    height=5,
     )
-label2.pack()
+button.pack()
+
+entry.insert(0, "Real")
+entry.delete(0, tk.END)
+
+entry.insert(7, "Real")
+
+
+name = entry.get()
+print(name)
 
 window.mainloop()
